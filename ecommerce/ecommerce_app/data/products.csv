@@ -1,0 +1,7 @@
+id, name, category, cost, image_url
+1, skis, gear, 800, https://static.thenounproject.com/png/763158-200.png
+2, snowboard, gear, 600, https://static.thenounproject.com/png/1518792-200.png
+3, helmet, essentials, 150, https://static.thenounproject.com/png/79666-200.png
+4, goggles, essentials, 100, https://static.thenounproject.com/png/754862-200.png
+5, avalanche gear, additional, 400, https://static.thenounproject.com/png/4317750-200.png
+6, ski poles, additional, 80, https://static.thenounproject.com/png/5012556-200.png

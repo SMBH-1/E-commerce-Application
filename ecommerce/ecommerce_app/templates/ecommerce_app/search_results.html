@@ -1,0 +1,25 @@
+{%extends 'ecommerce_app/layout.html'%}
+{%block body%}
+<section class="p-5">
+  <div class="container">
+    <div class="card col-md bg-info text-dark">
+      <div class="card-body text-center">
+        <div class= "h3 p-5 text-uppercase">
+          {% if image_url %}
+            <br>The Item You Requested Is Out Of Stock</br>
+            <div class="p-4">
+              <img src="{{image_url}}">
+            </div>
+          {% else %}
+            {{em}}
+            <div class= "h5 text-uppercase text-center">
+              <br>Image Not Found</br>
+              <br>Please Search For Another Item</br>
+            </div>
+          {%endif%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{%endblock%}

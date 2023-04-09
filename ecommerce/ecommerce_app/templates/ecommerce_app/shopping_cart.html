@@ -1,0 +1,40 @@
+{%extends 'ecommerce_app/layout.html'%}
+
+{%block body%}
+<section class="p-5">
+  <div class="container">
+      <div class= "h2 p-5 text-uppercase text-light text-center">
+        Your Shopping Cart
+      </div>
+      <div class="container">
+        {% for element in mod %}
+          <div class="col-md">
+            <div class="card bg-info text-success">
+              <div class="card-body">
+                <div class="h3 mb-2 text-dark">
+                  <div class="row">  
+                      {% if element.cost is not None%}
+                        <div class="col text-start">
+                          {{element.name|title}}
+                        </div>
+                        <div class="col text-center">
+                          Quantity: {{element.quantity}}
+                        </div>
+                        <div class="col text-end">
+                          Cost: ${{element.cost}}
+                        </div>
+                      {%else%}
+                        <div class="col text-end">
+                          Total Cost: ${{element.total_sum}}
+                        </div>
+                      {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+        {% endfor %}
+      </div>
+  </div>
+</section>
+{%endblock%}

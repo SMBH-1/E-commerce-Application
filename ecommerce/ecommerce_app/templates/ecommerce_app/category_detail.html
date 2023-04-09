@@ -1,0 +1,25 @@
+{%extends 'ecommerce_app/layout.html'%}
+
+{%block body%}
+  <div class = "h1 p-5 text-uppercase text-center">
+    {{category_data.0.category}}
+  </div>
+  {% comment %} Product Boxes {% endcomment %}
+  <section class="p-5">
+    <div class="container">
+      <div class="row text-center">
+        {% for product in category_data %}
+        <div class="col-md">
+          <div class="card bg-info text-success">
+            <div class="card-body text-center">
+              <div class="h4 mb-2 text-dark">
+              <a href="{% url 'product_detail' product.id%}">{{product.name|title}}</a>
+              </div>
+            </div>
+          </div>        
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{%endblock%}

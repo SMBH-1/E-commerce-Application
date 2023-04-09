@@ -1,0 +1,23 @@
+{%extends 'ecommerce_app/layout.html'%}
+
+{%block body%}
+<div class= "h1 p-5 text-uppercase text-center text-light">
+    {{category}} 
+</div>
+<section>
+    <div class="container text-center">
+        <div class="card col-md bg-info text-dark">
+            <div class"card-body">
+                <div class="h2">
+                    <br>{{name|title}}</br>
+                    <br>${{cost}}</br>
+                    <br><img src = "{{image_url}}"></br>
+                </div>
+                <div class="h5 p-4">
+                    <a><button onclick="addToCart({{id}})"> Add to shopping cart</button></a>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>
+{%endblock%}
